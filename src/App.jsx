@@ -1,5 +1,6 @@
 import './App.css'
 import Scoreboard from './components/Scoreboard'
+import CardGrid from './components/CardGrid'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       </section>
 
       <section className="game-board">
-        {/* CardGrid  */}
+        <CardGrid cards={[]} onCardClick={() => {}} />
       </section>
     </main>
   )
