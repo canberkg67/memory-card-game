@@ -1,4 +1,5 @@
 import './App.css'
+import Scoreboard from './components/Scoreboard'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       </header>
 
       <section className="game-info">
-        {/* Scoreboard */}
+        <Scoreboard score={0} highScore={0} />
       </section>
 
       <section className="game-board">
