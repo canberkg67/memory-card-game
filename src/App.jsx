@@ -1,26 +1,18 @@
 import './App.css'
 import Scoreboard from './components/Scoreboard'
 import CardGrid from './components/CardGrid'
+import { useState , useEffect } from 'react'
 
 function App() {
 
-  const cards = [
-  {
-    id: 1,
-    name: 'Bulbasaur',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-  },
-  {
-    id: 4,
-    name: 'Charmander',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
-  },
-  {
-    id: 7,
-    name: 'Squirtle',
-    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
-  },
-];
+  const [cards, setCards] = useState([])
+
+  useEffect(() => {
+
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=12')
+      .then(response => response.json())
+      .then((data) => { setCards(data.results); });
+  }, [])
 
 
   return (
