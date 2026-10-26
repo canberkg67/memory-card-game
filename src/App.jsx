@@ -4,6 +4,24 @@ import CardGrid from './components/CardGrid'
 
 function App() {
 
+  const cards = [
+  {
+    id: 1,
+    name: 'Bulbasaur',
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
+  },
+  {
+    id: 4,
+    name: 'Charmander',
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png',
+  },
+  {
+    id: 7,
+    name: 'Squirtle',
+    image: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png',
+  },
+];
+
 
   return (
     <main className="game">
@@ -22,7 +40,7 @@ function App() {
       </section>
 
       <section className="game-board">
-        <CardGrid cards={[]} onCardClick={() => {}} />
+        <CardGrid cards={cards} onCardClick={(id) => console.log("Clicked card ID: ", id)} />
       </section>
     </main>
   )
