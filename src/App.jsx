@@ -7,6 +7,10 @@ function App() {
 
   const [cards, setCards] = useState([])
 
+  const [clickedIds, setClickedIds] = useState([])
+
+  //url,id,name,results, sprites, front_default comes from the API response.
+
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=12')
       .then((response) => response.json())
@@ -27,6 +31,13 @@ function App() {
       });
   }, []);
 
+  function handleCardClick(id) {
+    if (clickedIds.includes(id)) {
+      console.log('You clicked the same card twice! Game over.');
+      return;
+    }
+    setClickedIds((prevClickedIds) => [...prevClickedIds, id]);
+  }
 
   return (
     <main className="game">
@@ -45,7 +56,7 @@ function App() {
       </section>
 
       <section className="game-board">
-        <CardGrid cards={cards} onCardClick={(id) => console.log("Clicked card ID: ", id)} />
+        <CardGrid cards={cards} onCardClick={handleCardClick} />
       </section>
     </main>
   )
