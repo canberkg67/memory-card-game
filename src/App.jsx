@@ -9,6 +9,8 @@ function App() {
 
   const [clickedIds, setClickedIds] = useState([])
 
+  const [gameOver, setGameOver] = useState(false)
+
   //url,id,name,results, sprites, front_default comes from the API response.
 
   useEffect(() => {
@@ -34,6 +36,7 @@ function App() {
   function handleCardClick(id) {
     if (clickedIds.includes(id)) {
       console.log('You clicked the same card twice! Game over.');
+      setGameOver(true);
       return;
     }
     setClickedIds((prevClickedIds) => [...prevClickedIds, id]);
@@ -54,6 +57,8 @@ function App() {
       <section className="game-info">
         <Scoreboard score={0} highScore={0} />
       </section>
+
+      {gameOver && <h2>Game Over!</h2>}
 
       <section className="game-board">
         <CardGrid cards={cards} onCardClick={handleCardClick} />
