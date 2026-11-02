@@ -13,6 +13,8 @@ function App() {
 
   const score = clickedIds.length;
 
+  const [highScore, setHighScore] = useState(0);
+
   //url,id,name,results, sprites, front_default comes from the API response.
 
   useEffect(() => {
@@ -41,6 +43,12 @@ function App() {
       setGameOver(true);
       return;
     }
+
+    const newScore = clickedIds.length + 1;
+    if (newScore > highScore) {
+      setHighScore(newScore);
+    }
+
     setClickedIds((prevClickedIds) => [...prevClickedIds, id]);
   }
 
@@ -57,7 +65,7 @@ function App() {
       </header>
 
       <section className="game-info">
-        <Scoreboard score={score} highScore={0} />
+        <Scoreboard score={score} highScore={highScore} />
       </section>
 
       {gameOver && <h2>Game Over!</h2>}
