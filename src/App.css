@@ -72,6 +72,12 @@ h1 {
     padding: 12px;
     box-shadow: 0 3px 10px rgba(50, 70, 90, 0.12);
     text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .card:nth-child(3n + 1) {
