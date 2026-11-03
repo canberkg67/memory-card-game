@@ -22,8 +22,22 @@ h1 {
     text-align: center;
 }
 
+.card:nth-child(3n + 1) {
+    background-color: #DDE9D9;
+}
+
+.card:nth-child(3n + 2) {
+    background-color: #F5DFD2;
+}
+
+.card:nth-child(3n) {
+    background-color: #DCE9F0;
+}
+
 .card img {
-    width: 100%;
-    aspect-ratio: 1;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
