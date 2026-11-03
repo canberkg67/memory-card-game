@@ -81,43 +81,58 @@ function App() {
   }
 
   return (
-    <main className="game">
-      <header className="game-header">
-        <h1>Pokémon Cards in My Mind</h1>
+    <>
+      <main className="game">
+        <header className="game-header">
+          <h1>Cards in My Mind</h1>
 
-        <div className="game-header-content">
-          <div className="game-rules">
-            <ul>
-              <li>
-                <Pokeball /> Click on a Pokemon card only once.</li>
-              <li>
-                <Pokeball /> Cards will flip when one is clicked.</li>
-              <li>
-                <Pokeball /> Do not click on the same card twice.</li>
-              <li>
-                <Pokeball /> Try to surpass your high score!</li>
-            </ul>
+          <div className="game-header-content">
+            <div className="game-rules">
+              <ul>
+                <li>
+                  <Pokeball /> Click on a Pokemon card only once.</li>
+                <li>
+                  <Pokeball /> Cards will flip when one is clicked.</li>
+                <li>
+                  <Pokeball /> Do not click on the same card twice.</li>
+                <li>
+                  <Pokeball /> Try to surpass your high score!</li>
+              </ul>
+            </div>
+
+            <section className="game-info">
+              <Scoreboard score={score} highScore={highScore} />
+            </section>
+
           </div>
 
-          <section className="game-info">
-            <Scoreboard score={score} highScore={highScore} />
-          </section>
+        </header>
 
-        </div>
-    
-      </header>
+        {gameOver && (
+          <div className="game-over">
+            <h2>Game Over!</h2>
+            <button onClick={resetGame}>Play Again</button>
+          </div>
+        )}
 
-      {gameOver && (
-        <div className="game-over">
-          <h2>Game Over!</h2>
-          <button onClick={resetGame}>Play Again</button>
-        </div>
-      )}
+        <section className="game-board">
+          <CardGrid cards={cards} onCardClick={handleCardClick} />
+        </section>
+      </main>
 
-      <section className="game-board">
-        <CardGrid cards={cards} onCardClick={handleCardClick} />
-      </section>
-    </main>
+      <footer className="game-footer">
+        <p>
+          Pokémon data provided by{' '}
+          <a href="https://pokeapi.co/" target="_blank" rel="noreferrer">
+            PokéAPI
+          </a>.
+        </p>
+        <p>
+          An unofficial project. Not affiliated with Nintendo
+          or The Pokémon Company.
+        </p>
+      </footer>
+    </>
   )
 }
 

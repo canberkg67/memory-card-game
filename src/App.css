@@ -7,11 +7,15 @@ h1 {
     color: #52677D;
 }
 
+/* Card Container */
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
+
+/* Card */
 
 .card {
     background-color: #FFFFFF;
@@ -106,4 +110,30 @@ h1 {
     display: flex;
     justify-content: center;
     font-weight: bold;
+}
+
+/* Footer */
+
+.game-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #52677D;
+    font-size: 0.85rem;
+}
+
+.game-footer p {
+    margin-bottom: 6px;
+}
+
+.game-footer a {
+    color: #D65B55;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.game-footer a:hover {
+    color: #A94340;
+    text-decoration: underline;
 }
