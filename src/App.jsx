@@ -13,7 +13,14 @@ function App() {
 
   const score = clickedIds.length;
 
-  const [highScore, setHighScore] = useState(0);
+  const [highScore, setHighScore] = useState(() => {
+    const storedHighScore = localStorage.getItem('highScore');
+    return Number(storedHighScore) || 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('highScore', highScore);
+  }, [highScore]);
 
   //url,id,name,results, sprites, front_default comes from the API response.
 
