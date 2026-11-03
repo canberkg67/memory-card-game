@@ -38,8 +38,11 @@ function App() {
   }, []);
 
   function handleCardClick(id) {
+    if (gameOver) {
+      return;
+    }
+
     if (clickedIds.includes(id)) {
-      console.log('You clicked the same card twice! Game over.');
       setGameOver(true);
       return;
     }
