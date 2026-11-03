@@ -41,3 +41,59 @@ h1 {
     display: block;
     margin: 0 auto;
 }
+
+.card p {
+    text-transform: capitalize;
+}
+
+/* Margins */
+
+.game {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+h1 {
+    margin-bottom: 24px;
+}
+
+.game-info {
+    margin-bottom: 24px;
+}
+
+.card-grid {
+    margin-top: 20px;
+}
+
+.card p {
+    margin-top: 8px;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.game-header h1 {
+    margin-bottom: 24px;
+}
+
+.game-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.game-rules {
+    text-align: left;
+}
+
+.game-rules ul {
+    padding-left: 20px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+}
