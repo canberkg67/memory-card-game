@@ -2,6 +2,7 @@ import './App.css'
 import Scoreboard from './components/Scoreboard'
 import CardGrid from './components/CardGrid'
 import { useState, useEffect } from 'react'
+import Pokeball from './components/Pokeball'
 
 function App() {
 
@@ -87,10 +88,14 @@ function App() {
         <div className="game-header-content">
           <div className="game-rules">
             <ul>
-              <li>Click on a Pokemon card only once.</li>
-              <li>Cards will flip when one is clicked.</li>
-              <li>Do not click on the same card twice.</li>
-              <li>Try to surpass your high score!</li>
+              <li>
+                <Pokeball /> Click on a Pokemon card only once.</li>
+              <li>
+                <Pokeball /> Cards will flip when one is clicked.</li>
+              <li>
+                <Pokeball /> Do not click on the same card twice.</li>
+              <li>
+                <Pokeball /> Try to surpass your high score!</li>
             </ul>
           </div>
 

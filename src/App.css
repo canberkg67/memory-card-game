@@ -46,6 +46,13 @@ h1 {
     text-transform: capitalize;
 }
 
+.game-rules,
+.game-info {
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(50, 70, 90, 0.12);
+}
+
 /* Margins */
 
 .game {
@@ -59,6 +66,7 @@ h1 {
 
 .game-info {
     margin-bottom: 24px;
+    background-color: #DCE9F0;
 }
 
 .card-grid {
@@ -80,20 +88,23 @@ h1 {
 
 .game-header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 32px;
 }
 
 .game-rules {
     text-align: left;
+    background-color: #DCE9F0;
 }
 
 .game-rules ul {
     padding-left: 20px;
+    list-style-type:none;
 }
 
 .game-info {
     display: flex;
     justify-content: center;
+    font-weight: bold;
 }
