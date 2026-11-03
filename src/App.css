@@ -1,3 +1,13 @@
+body {
+    background-color: #F5F0DC;
+    color: #52677D;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #52677D;
+}
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
