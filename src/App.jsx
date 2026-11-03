@@ -66,6 +66,12 @@ function App() {
     return shuffled;
   }
 
+  function resetGame() {
+    setClickedIds([]);
+    setGameOver(false);
+    setCards(shuffleCards(cards));
+  }
+
   return (
     <main className="game">
       <header className="game-header">
@@ -82,7 +88,12 @@ function App() {
         <Scoreboard score={score} highScore={highScore} />
       </section>
 
-      {gameOver && <h2>Game Over!</h2>}
+      {gameOver && (
+        <div className="game-over">
+          <h2>Game Over!</h2>
+          <button onClick={resetGame}>Play Again</button>
+        </div>
+      )}
 
       <section className="game-board">
         <CardGrid cards={cards} onCardClick={handleCardClick} />
