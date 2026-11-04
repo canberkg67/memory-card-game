@@ -1,16 +1,26 @@
-# React + Vite
+# Cards in My Mind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Pokémon-themed card memorizing game built with React and Vite.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[Cards in My Mind](https://cards-in-my-mind.vercel.app/)**
 
-## React Compiler
+## How to Play
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Click on a card to earn a point.
+- After each click, the cards are shuffled.
+- Do not click on the same Pokémon twice.
+- Clicking a previously selected Pokémon results in game over.
+- Try to beat your personal best score.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Pokémon data fetched from the PokéAPI.
+- Cards are randomized after every successful click.
+- High score saved in browser by using localStorage.
+
+## Credits
+
+- [PokeAPI](https://pokeapi.co/)
+- **Fredoka** and **Nunito** fonts are downloaded from [Google Fonts](https://fonts.google.com/)
